@@ -4,18 +4,15 @@ const PropertyCreationContext = createContext();
 
 export function PropertyCreationProvider({ children }) {
   const [propertyData, setPropertyData] = useState({
-    localisation: {
-      city: "",
-      address: "",
-      postalCode: "",
-    },
-    propertyType: "",
-    info: {
-      guests: 2,
-      rooms: 2,
-      beds: 3,
-      baths: 2,
-      
+    localisation: null,
+    propertyType: null,
+    info: { guests: 1, rooms: 1, beds: 1, baths: 1 },
+    equipments: [],
+    stepsCompleted: {
+      localisation: false,
+      propertyType: false,
+      info: false,
+      equipments: false,
     },
   });
 
